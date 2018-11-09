@@ -1,0 +1,12 @@
+#section-error {
+   position: relative;
+   top: 40px;
+   left: 0;
+   width: 100%;
+   margin: auto;
+}
+
+.title {
+   font-weight: bold;
+   font-style: italic;
+}

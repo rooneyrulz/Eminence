@@ -1,0 +1,21 @@
+#section-login {
+   position: relative;
+   top: 40px;
+   left: 0;
+   width: 100%;
+   margin: auto;
+}
+
+.title {
+   font-weight: bold;
+   font-style: italic;
+}
+
+#btn-login {
+   box-shadow: 2px 2px 8px #000 !important;
+}
+
+#btn-login:hover {
+   box-shadow: none !important;
+   background: #222 !important;
+}

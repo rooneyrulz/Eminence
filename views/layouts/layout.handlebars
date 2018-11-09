@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="shortcut icon" href="/icons/node.svg" type="image/x-icon">
+   <link rel="stylesheet" href="/materialize-css/dist/css/materialize.min.css">
+   <link rel="stylesheet" href="/css/layout.css">
+   <link rel="stylesheet" href="/css/getstarted.css">
+   <link rel="stylesheet" href="/css/index.css">
+   <link rel="stylesheet" href="/css/register.css">
+   <link rel="stylesheet" href="/css/alert.css">
+   <link rel="stylesheet" href="/css/login.css">
+   <link rel="stylesheet" href="/css/about.css">
+   <title>Node App</title>
+</head>
+<body class="scrollspy" id="!home">
+  {{#if user}}
+    <div class="navbar-fixed">
+      <nav id="navbar-user" class="teal darken-2">
+        <ul id="nav-logout" class="right">
+          <li><a href="/user/logout">Logout</a></li>
+        </ul>
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="navbar-header">
+              <a href="/eminence/home" class="brand-logo">
+                <span class="logo-e">E</span>minence
+              </a>
+              <a href="#!" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+              </a>
+            </div>
+            <div class="navbar-navs">
+              <ul class="hide-on-med-and-down right">
+                <li><a href="#!home">Home</a></li>
+                <li><a href="#!search">Search</a></li>
+                <li><a href="#!follow">Follow</a></li>
+                <li><a href="#!blog">Blogs</a></li>
+                <li><a href="#!contact">Contact</a></li>
+                <li><a href="#!about">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  {{else}}
+    <div class="navbar-fixed">
+      <nav id="navbar" class="">
+        <div class="container">
+          <div class="nav-wrapper">
+            <div class="navbar-header">
+              <a href="/home" class="brand-logo">
+                <span class="logo-e">E</span>minence
+              </a>
+              <a href="#!" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+              </a>
+            </div>
+            <div class="navbar-navs">
+              <ul class="hide-on-med-and-down right">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/user/register">Register</a></li>
+                <li><a href="/user/login">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  {{/if}}
+  <!--Navbar Ends Here!!-->
+
+  {{#if validation_errors}}
+    {{#each validation_errors}}
+      <section id="section-messages" class="section">
+        <div class="container">
+          <div class="alert alert-error valign-wrapper">
+            <span class="message">{{msg}}</span>
+            <span class="alert-close">&times;</span>
+          </div>
+        </div>
+      </section>
+    {{/each}}
+  {{/if}}
+  {{#if success_msg}}
+    <section id="section-messages" class="section">
+      <div class="container">
+        <div class="alert alert-success valign-wrapper">
+          <span class="message">{{success_msg}}</span>
+          <span class="alert-close">&times;</span>
+        </div>
+      </div>
+    </section>
+  {{/if}}
+  {{#if error_msg}}
+    <section id="section-messages" class="section">
+      <div class="container">
+        <div class="alert alert-error valign-wrapper">
+          <span class="message">{{error_msg}}</span>
+          <span class="alert-close">&times;</span>
+        </div>
+      </div>
+    </section>
+  {{/if}}
+  {{#if error}}
+    <section id="section-messages" class="section">
+      <div class="container">
+        <div class="alert alert-error valign-wrapper">
+          <span class="message">{{error}}</span>
+          <span class="alert-close">&times;</span>
+        </div>
+      </div>
+    </section>
+  {{/if}}
+  <!--Section-Messages Ends Here!!-->
+  {{{ body }}}
+
+  <!--Side Nav-->
+  <ul class="sidenav" id="mobile-nav">
+    {{#if user}}
+      <li><a href="#!home">Home</a></li>
+      <li><a href="#!search">Search</a></li>
+      <li><a href="#!follow">Follow</a></li>
+      <li><a href="#!blog">Blogs</a></li>
+      <li><a href="#!contact">Contact</a></li>
+      <li><a href="#!about">About</a></li>
+    {{else}}
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/user/register">Register</a></li>
+      <li><a href="/user/login">Login</a></li>
+    {{/if}}
+  </ul>
+
+  <script src="/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/js/init.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

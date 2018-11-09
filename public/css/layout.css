@@ -1,0 +1,113 @@
+* {
+   box-sizing: content-box;
+}
+
+body {
+   margin: 0 !important;
+   padding: 0 !important;
+   line-height: 1.5 !important;
+   overflow-x: hidden !important;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+   font-size: 1em !important;
+   font-weight: 300 !important;
+}
+/*Styles of & Body End Here!!*/
+
+.navbar-fixed {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 40px;
+   line-height: 40px;
+}
+
+nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 40px;
+   line-height: 40px;
+   padding-left: 1em;
+   padding-right: 1em;
+   background: #222;
+   z-index: 3;
+}
+
+.brand-logo {
+   padding-left: 1em;
+   padding-right: 1em;
+   line-height: 36px;
+   font-size: 26px !important;
+   font-weight: 500;
+   text-shadow: 2px 2px 8px #000;
+}
+
+.logo-e {
+   font-family: Georgia, 'Times New Roman', Times, serif !important;
+   font-weight: bolder !important;
+   font-size: 28px !important;
+   animation: logo-e 3s linear infinite forwards;
+   display: inline-block !important;
+}
+
+@keyframes logo-e {
+   from {
+      transform: rotateY(0deg);
+   }
+   to {
+      transform: rotateY(360deg);
+   }
+}
+
+.sidenav-trigger {
+   height: 40px !important;
+   margin: 0 !important;
+   padding-left: 1em !important;
+   padding-right: 1em !important;
+}
+
+.sidenav-trigger i {
+   margin: 0 !important;
+   padding: 0 !important;
+   height: 40px !important;
+   line-height: 36px !important;
+}
+
+nav ul li {
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+}
+
+nav ul li:hover {
+   background: #111;
+}
+
+#navbar-user ul li {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+#navbar-user ul li:hover {
+   background: #00695c;
+}
+
+#nav-logout {
+   margin-right: 1em !important;
+   padding-left: 0 !important;
+   padding-right: 0 !important; 
+}
+
+/*Styles of Navbar End Here!!*/
+
+#section-messages {
+   position: relative;
+   top: 40px;
+   left: 0;
+   width: 100%;
+   margin: auto;
+   padding: 0;
+   padding-top: 7px;
+}
+
